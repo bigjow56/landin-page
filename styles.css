@@ -413,12 +413,24 @@ nav {
     border: 1px solid rgba(99, 102, 241, 0.2);
     border-radius: 20px;
     padding: 30px;
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #6366f1;
 }
 
 .testimonial-text {
-    font-style: italic;
+    font-style: normal;
     color: #e0e0e0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     line-height: 1.6;
 }
 
