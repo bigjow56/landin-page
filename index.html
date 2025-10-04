@@ -151,30 +151,92 @@
         <div class="container">
             <h2 class="section-title">Projetos Realizados</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item" onclick="openModal('modal1')">
                     <img src="./attached_assets/3_1759553632614.jpg" alt="E-commerce" class="portfolio-image">
                     <div class="portfolio-overlay">
-                        <h4>E-commerce</h4>
-                        <p>+250% em conversões</p>
+                        <h4>E-commerce Completo</h4>
+                        <p>Clique para ver detalhes</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" onclick="openModal('modal2')">
                     <img src="./attached_assets/1_1759553632613.jpg" alt="Sistema de Delivery" class="portfolio-image">
                     <div class="portfolio-overlay">
-                        <h4>Sistema de Delivery</h4>
-                        <p>Automação completa</p>
+                        <h4>Delivery Inteligente</h4>
+                        <p>Clique para ver detalhes</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" onclick="openModal('modal3')">
                     <img src="./attached_assets/2_1759553632614.jpg" alt="Clínica Dental" class="portfolio-image">
                     <div class="portfolio-overlay">
-                        <h4>Clínica Dental</h4>
-                        <p>Agendamento automático</p>
+                        <h4>Clínica Odontológica</h4>
+                        <p>Clique para ver detalhes</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h3>🛒 E-commerce Completo</h3>
+            <p class="modal-subtitle">Solução robusta para escalar vendas online</p>
+            <h4>Destaques:</h4>
+            <ul class="modal-list">
+                <li>✅ Painel de analytics em tempo real</li>
+                <li>✅ Follow-up automático para clientes</li>
+                <li>✅ Controle de estoque inteligente</li>
+                <li>✅ Integração com diversos meios de pagamento</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>🍔 Delivery Inteligente</h3>
+            <p class="modal-subtitle">Experiência de compra otimizada para o setor alimentício</p>
+            <h4>Destaques:</h4>
+            <ul class="modal-list">
+                <li>✅ Programa de fidelidade para clientes</li>
+                <li>✅ Painel de analytics detalhado</li>
+                <li>✅ Agente de IA para atendimento em tempo real</li>
+                <li>✅ Automação de follow-up</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>🦷 Clínica Odontológica Digital</h3>
+            <p class="modal-subtitle">Foco em eficiência e proximidade com os pacientes</p>
+            <h4>Destaques:</h4>
+            <ul class="modal-list">
+                <li>✅ Agendamento online de consultas</li>
+                <li>✅ Lembretes automáticos para pacientes</li>
+                <li>✅ Painel de gestão de clientes e consultas</li>
+                <li>✅ Design profissional e humanizado</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
 
     <section id="depoimentos" class="testimonials">
         <div class="container">
